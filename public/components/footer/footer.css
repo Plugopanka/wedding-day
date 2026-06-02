@@ -1,247 +1,268 @@
 /* game-footer.css - игровой футер с пасхалкой */
 
 .game-footer {
-    text-align: center;
-    padding: 32px 24px 40px;
-    margin-top: 48px;
-    position: relative;
-    border-top: 2px solid rgba(245, 166, 91, 0.15);
+  text-align: center;
+  padding: 32px 24px 40px;
+  margin-top: 48px;
+  position: relative;
+  border-top: 2px solid rgba(245, 166, 91, 0.15);
 }
 
 /* Секция с секретным кодом */
 .footer-secret {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 28px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
 }
 
 .secret-pixel {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.7rem;
-    color: #f5a65b;
-    opacity: 0.4;
-    letter-spacing: 2px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.7rem;
+  color: #f5a65b;
+  opacity: 0.4;
+  letter-spacing: 2px;
 }
 
 .secret-hint {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background: linear-gradient(135deg, rgba(245, 166, 91, 0.1), rgba(249, 84, 101, 0.05));
-    padding: 12px 24px;
-    border-radius: 60px;
-    border: 1px solid rgba(245, 166, 91, 0.2);
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 166, 91, 0.1),
+    rgba(249, 84, 101, 0.05)
+  );
+  padding: 12px 24px;
+  border-radius: 60px;
+  border: 1px solid rgba(245, 166, 91, 0.2);
+  transition: all 0.3s ease;
 }
 
 .secret-hint:hover {
-    transform: scale(1.02);
-    border-color: rgba(245, 166, 91, 0.4);
-    box-shadow: 0 4px 15px rgba(245, 166, 91, 0.15);
+  transform: scale(1.02);
+  border-color: rgba(245, 166, 91, 0.4);
+  box-shadow: 0 4px 15px rgba(245, 166, 91, 0.15);
 }
 
 .hint-icon {
-    font-size: 1.3rem;
-    animation: iconFloat 2s ease-in-out infinite;
+  font-size: 1.3rem;
+  animation: iconFloat 2s ease-in-out infinite;
 }
 
 .hint-icon img {
-    width: 24px;
+  width: 24px;
 }
 
 @keyframes iconFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-3px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 .hint-text {
-    text-align: center;
+  text-align: center;
 }
 
 .hint-title {
-    display: block;
-    font-size: 1em;
-    color: #f95465;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+  display: block;
+  font-size: 1em;
+  color: #f95465;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
 }
 
 /* Клавиши Konami */
 .konami-keys {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    margin: 10px 10px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 10px 10px;
+  flex-wrap: wrap;
 }
 
 .key {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
-    border-radius: 8px;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #f5a65b;
-    box-shadow: 0 3px 0 #0a0a0a;
-    transition: all 0.05s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  border-radius: 8px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #f5a65b;
+  box-shadow: 0 3px 0 #0a0a0a;
+  transition: all 0.05s ease;
 }
 
 .key-left span {
-    display: inline-block;
-    transform: rotate(-90deg);
+  display: inline-block;
+  transform: rotate(-90deg);
 }
 
 .key-right span {
-    display: inline-block;
-    transform: rotate(90deg);
+  display: inline-block;
+  transform: rotate(90deg);
 }
 
 .key--letter {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 /* Анимация нажатия (по клику) */
 .key:active {
-    transform: translateY(2px);
-    box-shadow: 0 1px 0 #0a0a0a;
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #0a0a0a;
 }
 
 /* Ховер-эффект для клавиш */
 .key:hover {
-    background: linear-gradient(135deg, #3d3d3d, #2a2a2a);
-    color: #ffd700;
-    transform: translateY(-1px);
+  background: linear-gradient(135deg, #3d3d3d, #2a2a2a);
+  color: #ffd700;
+  transform: translateY(-1px);
 }
 
 .hint-result {
-    display: block;
-    font-family: monospace;
-    font-size: 0.7rem;
-    color: #f5a65b;
-    margin-top: 6px;
-    opacity: 0.8;
+  display: block;
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #f5a65b;
+  margin-top: 6px;
+  opacity: 0.8;
 }
 
 /* Основное сообщение футера */
 .footer-message {
-    text-align: center;
+  text-align: center;
 }
 
 .footer-message p {
-    color: #b0b0b0;
-    font-size: 0.8rem;
-    margin: 0;
+  color: #5a5a5a;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 .couple-signature {
-    margin-top: 8px !important;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.65rem !important;
-    color: #f5a65b !important;
-    letter-spacing: 1px;
+  margin-top: 8px !important;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.65rem !important;
+  color: #f5a65b !important;
+  letter-spacing: 1px;
+}
+
+.hint-title {
+  font-weight: 500;
 }
 
 /* ===== АНИМАЦИЯ ПРИ АКТИВАЦИИ КОДА ===== */
 /* Добавляем стиль для подсветки клавиш при активации кода */
 @keyframes keyFlash {
-    0%, 100% { background: linear-gradient(135deg, #2d2d2d, #1a1a1a); color: #f5a65b; }
-    50% { background: linear-gradient(135deg, #f5a65b, #f95465); color: white; box-shadow: 0 0 10px #f5a65b; }
+  0%,
+  100% {
+    background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+    color: #f5a65b;
+  }
+  50% {
+    background: linear-gradient(135deg, #f5a65b, #f95465);
+    color: white;
+    box-shadow: 0 0 10px #f5a65b;
+  }
 }
 
 .key-flash {
-    animation: keyFlash 0.2s ease;
+  animation: keyFlash 0.2s ease;
 }
 
 /* ===== АДАПТИВ ===== */
 @media (max-width: 768px) {
-    .game-footer {
-        padding: 24px 16px 32px;
-        margin-top: 32px;
-    }
+  .game-footer {
+    padding: 24px 16px 32px;
+    margin-top: 32px;
+  }
 
-    .footer-secret {
-        gap: 10px;
-    }
+  .footer-secret {
+    gap: 10px;
+  }
 
-    .secret-hint {
-        padding: 8px 16px;
-        gap: 10px;
-    }
+  .secret-hint {
+    padding: 8px 16px;
+    gap: 10px;
+  }
 
-    .hint-icon {
-        font-size: 1rem;
-    }
+  .hint-icon {
+    font-size: 1rem;
+  }
 
-    .hint-title {
-        font-size: 0.6em;
-    }
+  .hint-title {
+    font-size: 0.9em;
+  }
 
-    .key {
-        width: 26px;
-        height: 26px;
-        font-size: 0.6rem;
-    }
+  .key {
+    width: 26px;
+    height: 26px;
+    font-size: 0.6rem;
+  }
 
-    .key--letter {
-        font-size: 0.7rem;
-    }
+  .key--letter {
+    font-size: 0.7rem;
+  }
 
-    .hint-result {
-        font-size: 0.55rem;
-    }
+  .hint-result {
+    font-size: 0.55rem;
+  }
 
-    .footer-message p {
-        font-size: 0.7rem;
-    }
+  .footer-message p {
+    font-size: 0.7rem;
+  }
 
-    .couple-signature {
-        font-size: 0.55rem !important;
-    }
+  .couple-signature {
+    font-size: 0.55rem !important;
+  }
 }
 
 @media (max-width: 550px) {
-    .secret-hint {
-        flex-direction: column;
-        gap: 8px;
-        border-radius: 24px;
-        padding: 12px 20px;
-    }
+  .secret-hint {
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 24px;
+    padding: 12px 20px;
+  }
 
-    .key {
-        width: 28px;
-        height: 28px;
-        font-size: 0.65rem;
-    }
+  .key {
+    width: 28px;
+    height: 28px;
+    font-size: 0.65rem;
+  }
 
-    .konami-keys {
-        gap: 4px;
-    }
+  .konami-keys {
+    gap: 4px;
+  }
 
-    .secret-pixel {
-        display: none;
-    }
+  .secret-pixel {
+    display: none;
+  }
 }
 
 @media (max-width: 400px) {
-    .key {
-        width: 24px;
-        height: 24px;
-        font-size: 0.55rem;
-    }
+  .key {
+    width: 24px;
+    height: 24px;
+    font-size: 0.55rem;
+  }
 
-    .key--letter {
-        font-size: 0.6rem;
-    }
+  .key--letter {
+    font-size: 0.6rem;
+  }
 
-    .hint-result {
-        font-size: 0.5rem;
-    }
+  .hint-result {
+    font-size: 0.5rem;
+  }
 }

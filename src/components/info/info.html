@@ -1,89 +1,101 @@
 <section class="section info-section">
-    <div class="section-header">
-      <div class="pixel-corner pixel-corner--tl">◤</div>
-      <h2>УРОВЕНЬ</h2>
-      <div class="pixel-corner pixel-corner--tr">◥</div>
-      <div class="pixel-corner pixel-corner--bl">◣</div>
-      <div class="pixel-corner pixel-corner--br">◢</div>
+  <div class="section-header">
+    <div class="pixel-corner pixel-corner--tl">◤</div>
+    <h2>УРОВЕНЬ</h2>
+    <div class="pixel-corner pixel-corner--tr">◥</div>
+    <div class="pixel-corner pixel-corner--bl">◣</div>
+    <div class="pixel-corner pixel-corner--br">◢</div>
   </div>
 
-    <div class="info-grid">
-        <!-- Карта (сделаем её главной) -->
-        <div class="info-card info-card--map">
-            <div class="info-card__inner">
-                <div class="map-container">
-                    <img src="/src/assets/map.jpg" alt="Карта места проведения" class="map-image" id="weddingMap">
-                    <div class="map-marker map-marker--zaggs">
-                        <span>📍</span>
-                        <div class="map-tooltip">Веранда "Бриз"</div>
-                    </div>
-                </div>
-                <div class="map-actions">
-                    <button class="map-btn" id="openMapBtn">
-                      <a class="map-link" target="_blank" href="https://yandex.ru/maps/-/CPTku4Ng">ПОСМОТРЕТЬ НА КАРТЕ</a>
-                    </button>
-                </div>
-            </div>
+  <div class="info-grid">
+    <!-- Карта (сделаем её главной) -->
+    <div class="info-card info-card--map">
+      <div class="info-card__inner">
+        <div class="map-container">
+          <img
+            src="/src/assets/map.jpg"
+            alt="Карта места проведения"
+            class="map-image"
+            id="weddingMap"
+          />
+          <div class="map-marker map-marker--zaggs">
+            <span>📍</span>
+            <div class="map-tooltip">Веранда "Бриз"</div>
+          </div>
         </div>
-
-        <!-- Дата и время -->
-        <div class="info-card info-card--date">
-            <div class="info-card__inner">
-                <div class="quest-badge quest-badge--small">ИГРОВАЯ СЕССИЯ</div>
-                <h3>02 АВГУСТА 2026</h3>
-                <div class="date-detail">
-                    <span class="day-name">ВОСКРЕСЕНЬЕ</span>
-                </div>
-                <div class="time-block">
-                    <div class="time-item">
-                        <span class="time-icon"><img src="/src/assets/dancing.png" alt=""></span>
-                        <div>
-                            <span class="time-label">СБОР ГОСТЕЙ</span>
-                            <span class="time-value">15:00</span>
-                        </div>
-                    </div>
-                    <div class="time-item">
-                        <span class="time-icon"><img src="/src/assets/ring.png" alt=""></span>
-                        <div>
-                            <span class="time-label">ЦЕРЕМОНИЯ</span>
-                            <span class="time-value">16:00</span>
-                        </div>
-                    </div>
-                    <div class="time-item">
-                        <span class="time-icon"><img src="/src/assets/beer.png" alt=""></span>
-                        <div>
-                            <span class="time-label">БАНКЕТ</span>
-                            <span class="time-value">17:00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="map-actions">
+          <button class="map-btn" id="openMapBtn">
+            <a
+              class="map-link"
+              target="_blank"
+              href="https://yandex.ru/maps/-/CPTku4Ng"
+              >ПОСМОТРЕТЬ НА КАРТЕ</a
+            >
+          </button>
         </div>
-
-        <!-- Адрес -->
-        <div class="info-card info-card--address">
-            <div class="info-card__inner">
-                <div class="quest-badge quest-badge--small">ОСНОВНАЯ ЛОКАЦИЯ</div>
-                <h3>ЯХТ-КЛУБ "ВОДНИК"</h3>
-                <div class="address-text">
-                    <div class="address-line">
-                        Долгопрудный
-                    </div>
-                    <div class="address-line">
-                        Набережная улица, 24
-                    </div>
-                    <div class="address-line">
-                        Веранда "Бриз"
-                    </div>
-                </div>
-                <div class="distance-badge">
-                    ПАРКОВКА НА ТЕРРИТОРИИ НА ВЕСЬ ДЕНЬ - 300р
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <div class="info-tip">
-        <span class="tip-icon">💡</span>
-        <span class="tip-text">Квест на стадии BETA-тестирования, возможны изменения в сюжете</span>
+
+    <!-- Дата и время -->
+    <div class="info-card info-card--date">
+      <div class="info-card__inner">
+        <div class="quest-badge quest-badge--small">ИГРОВАЯ СЕССИЯ</div>
+        <h3>02 АВГУСТА 2026</h3>
+        <div class="date-detail">
+          <span class="day-name">ВОСКРЕСЕНЬЕ</span>
+        </div>
+        <div class="time-block">
+          <div class="time-item">
+            <span class="time-icon"
+              ><img src="/src/assets/dancing.png" alt=""
+            /></span>
+            <div>
+              <span class="time-label">СБОР ГОСТЕЙ</span>
+              <span class="time-value">15:00</span>
+            </div>
+          </div>
+          <div class="time-item">
+            <span class="time-icon"
+              ><img src="/src/assets/ring.png" alt=""
+            /></span>
+            <div>
+              <span class="time-label">ЦЕРЕМОНИЯ</span>
+              <span class="time-value">16:00</span>
+            </div>
+          </div>
+          <div class="time-item">
+            <span class="time-icon"
+              ><img src="/src/assets/beer.png" alt=""
+            /></span>
+            <div>
+              <span class="time-label">БАНКЕТ</span>
+              <span class="time-value">17:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Адрес -->
+    <div class="info-card info-card--address">
+      <div class="info-card__inner">
+        <div class="quest-badge quest-badge--small">ОСНОВНАЯ ЛОКАЦИЯ</div>
+        <h3>ЯХТ-КЛУБ "ВОДНИК"</h3>
+        <div class="address-text">
+          <div class="address-line">Долгопрудный</div>
+          <div class="address-line">Набережная улица, 24</div>
+          <div class="address-line">Веранда "Бриз"</div>
+        </div>
+        <div class="distance-badge">
+          ПАРКОВКА НА ТЕРРИТОРИИ НА ВЕСЬ ДЕНЬ - 300р
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-tip">
+    <span class="tip-icon">💡</span>
+    <span class="tip-text"
+      >Квест на стадии BETA-тестирования, возможны изменения в сюжете</span
+    >
+  </div>
 </section>

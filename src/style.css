@@ -10,228 +10,260 @@
 
 /* ========== ФОНОВЫЕ SVG ИКОНКИ ========== */
 .background-icons {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
 }
 
 .bg-icon {
-    position: absolute;
-    opacity: 0.15;
-    pointer-events: none;
-    user-select: none;
+  position: absolute;
+  opacity: 0.15;
+  pointer-events: none;
+  user-select: none;
 }
 
 /* Иконка 1 - верхний левый угол */
 .bg-icon-1 {
-    top: -50px;
-    left: -60px;
-    width: 280px;
-    height: 280px;
-    animation: floatSlow 20s ease-in-out infinite;
+  top: -50px;
+  left: -60px;
+  width: 280px;
+  height: 280px;
+  animation: floatSlow 20s ease-in-out infinite;
 }
 
 /* Иконка 2 - верхний правый угол */
 .bg-icon-2 {
-    top: -40px;
-    right: -80px;
-    width: 320px;
-    height: 320px;
-    animation: floatSlow 25s ease-in-out infinite reverse;
+  top: -40px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  animation: floatSlow 25s ease-in-out infinite reverse;
 }
 
 /* Иконка 3 - нижний левый угол */
 .bg-icon-3 {
-    bottom: -60px;
-    left: -50px;
-    width: 260px;
-    height: 260px;
-    animation: floatSlow 22s ease-in-out infinite;
+  bottom: -60px;
+  left: -50px;
+  width: 260px;
+  height: 260px;
+  animation: floatSlow 22s ease-in-out infinite;
 }
 
 /* Иконка 4 - нижний правый угол */
 .bg-icon-4 {
-    bottom: -30px;
-    right: -100px;
-    width: 350px;
-    height: 350px;
-    animation: floatSlow 28s ease-in-out infinite reverse;
+  bottom: -30px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  animation: floatSlow 28s ease-in-out infinite reverse;
 }
 
 /* Иконка 5 - центр слева (выглядывает сбоку) */
 .bg-icon-5 {
-    top: 40%;
-    left: -70px;
-    width: 240px;
-    height: 240px;
-    animation: floatMedium 18s ease-in-out infinite;
+  top: 40%;
+  left: -70px;
+  width: 240px;
+  height: 240px;
+  animation: floatMedium 18s ease-in-out infinite;
 }
 
 /* Иконка 6 - центр справа */
 .bg-icon-6 {
-    top: 60%;
-    right: -90px;
-    width: 270px;
-    height: 270px;
-    animation: floatMedium 24s ease-in-out infinite reverse;
+  top: 60%;
+  right: -90px;
+  width: 270px;
+  height: 270px;
+  animation: floatMedium 24s ease-in-out infinite reverse;
 }
 
 /* Иконка 7 - сверху по центру (чуть выглядывает) */
 .bg-icon-7 {
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 220px;
-    height: 220px;
-    animation: floatSlow 30s ease-in-out infinite;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 220px;
+  animation: floatSlow 30s ease-in-out infinite;
 }
 
 /* Иконка 8 - снизу по центру */
 .bg-icon-8 {
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 250px;
-    height: 250px;
-    animation: floatSlow 26s ease-in-out infinite reverse;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  animation: floatSlow 26s ease-in-out infinite reverse;
 }
 
 /* Анимации плавания */
 @keyframes floatSlow {
-    0%, 100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    25% {
-        transform: translate(10px, -10px) rotate(5deg);
-    }
-    50% {
-        transform: translate(-5px, 15px) rotate(-3deg);
-    }
-    75% {
-        transform: translate(15px, 5px) rotate(2deg);
-    }
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, -10px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-5px, 15px) rotate(-3deg);
+  }
+  75% {
+    transform: translate(15px, 5px) rotate(2deg);
+  }
 }
 
 @keyframes floatMedium {
-    0%, 100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    33% {
-        transform: translate(-15px, -8px) rotate(-4deg);
-    }
-    66% {
-        transform: translate(8px, 12px) rotate(3deg);
-    }
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(-15px, -8px) rotate(-4deg);
+  }
+  66% {
+    transform: translate(8px, 12px) rotate(3deg);
+  }
 }
 
 /* Адаптив - на мобилках делаем иконки меньше */
 @media (max-width: 768px) {
-    .bg-icon {
-        opacity: 0.1; /* Еще прозрачнее на мобилках */
-    }
+  .bg-icon {
+    opacity: 0.1; /* Еще прозрачнее на мобилках */
+  }
 
-    .bg-icon-1 { width: 180px; height: 180px; top: -30px; left: -40px; }
-    .bg-icon-2 { width: 200px; height: 200px; top: 170px; right: -50px; }
-    .bg-icon-3 { width: 200px; height: 200px; bottom: -40px; left: -30px; }
-    .bg-icon-4 { width: 220px; height: 220px; bottom: -20px; right: -60px; }
-    .bg-icon-5 { width: 150px; height: 150px; left: -50px; }
-    .bg-icon-6 { width: 170px; height: 170px; right: -60px; }
-    .bg-icon-7 { width: 140px; height: 140px; }
-    .bg-icon-8 { width: 160px; height: 160px; }
+  .bg-icon-1 {
+    width: 180px;
+    height: 180px;
+    top: -30px;
+    left: -40px;
+  }
+  .bg-icon-2 {
+    width: 200px;
+    height: 200px;
+    top: 170px;
+    right: -50px;
+  }
+  .bg-icon-3 {
+    width: 200px;
+    height: 200px;
+    bottom: -40px;
+    left: -30px;
+  }
+  .bg-icon-4 {
+    width: 220px;
+    height: 220px;
+    bottom: -20px;
+    right: -60px;
+  }
+  .bg-icon-5 {
+    width: 150px;
+    height: 150px;
+    left: -50px;
+  }
+  .bg-icon-6 {
+    width: 170px;
+    height: 170px;
+    right: -60px;
+  }
+  .bg-icon-7 {
+    width: 140px;
+    height: 140px;
+  }
+  .bg-icon-8 {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 /* Для очень маленьких экранов */
 @media (max-width: 480px) {
-    .bg-icon {
-        opacity: 0.08;
-    }
+  .bg-icon {
+    opacity: 0.08;
+  }
 }
 
 body {
-            font-family: 'Inter', sans-serif;
-            background: #faf7f2;
-            color: #2d2d2d;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
+  font-family: 'Inter', sans-serif;
+  background: #faf7f2;
+  color: #2d2d2d;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
-        /* Современные блоки с минимальным скруглением */
-        .section {
-          background: rgba(255, 255, 255, 0.7);
-          border-radius: 8px;
-          padding: 64px 48px;
-          margin-bottom: 32px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-          border: 1px solid rgba(0, 0, 0, 0.05);
-          opacity: 0;
-          transform: scale(0.95);
-          transition: all 0.5s cubic-bezier(0.34, 1.2, 0.64, 1);
-      }
+/* Современные блоки с минимальным скруглением */
+.section {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  padding: 64px 48px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.5s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
 
-        .section.visible {
-            opacity: 1;
-            transform: scale(1);
-        }
+.section.visible {
+  opacity: 1;
+  transform: scale(1);
+}
 
-        h2 {
-            font-size: 1.75em;
-            font-weight: 600;
-            margin-bottom: 32px;
-            color: #2d2d2d;
-            letter-spacing: -0.02em;
-            position: relative;
-            display: inline-block;
-        }
+h2 {
+  font-size: 1.75em;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: #2d2d2d;
+  letter-spacing: -0.02em;
+  position: relative;
+  display: inline-block;
+}
 
-        /* Футер */
-        footer {
-            text-align: center;
-            padding: 48px 24px;
-            color: #b0b0b0;
-            font-size: 0.85em;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-            margin-top: 48px;
-        }
+/* Футер */
+footer {
+  text-align: center;
+  padding: 48px 24px;
+  color: #5a5a5a;
+  font-size: 0.85em;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 48px;
+}
 
-        /* Адаптивность */
-        @media (max-width: 768px) {
-            .section {
-                padding: 38px 20px;
-            }
+/* Адаптивность */
+@media (max-width: 768px) {
+  .section {
+    padding: 38px 20px;
+  }
 
-            .hero {
-                padding: 60px 24px;
-            }
+  .hero {
+    padding: 60px 24px;
+  }
 
-            .couple-names {
-                font-size: 3.5em;
-            }
+  .couple-names {
+    font-size: 3.5em;
+  }
 
-            .invite-text {
-                font-size: 1em;
-            }
+  .info-grid {
+    gap: 16px;
+  }
 
-            .info-grid {
-                gap: 16px;
-            }
+  .dresscode-items {
+    gap: 24px;
+  }
 
-            .dresscode-items {
-                gap: 24px;
-            }
-
-            .dress-circle {
-                width: 80px;
-                height: 80px;
-            }
-        }
+  .dress-circle {
+    width: 80px;
+    height: 80px;
+  }
+}

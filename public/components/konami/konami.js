@@ -7,11 +7,11 @@ let isActivated = false;
 
 // Добавляем CSS анимации
 function addKonamiStyles() {
-    if (document.getElementById('konami-styles')) return;
+  if (document.getElementById('konami-styles')) return;
 
-    const style = document.createElement('style');
-    style.id = 'konami-styles';
-    style.textContent = `
+  const style = document.createElement('style');
+  style.id = 'konami-styles';
+  style.textContent = `
         /* Анимация тряски */
         @keyframes konamiShake {
             0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -106,104 +106,104 @@ function addKonamiStyles() {
             }
         }
     `;
-    document.head.appendChild(style);
+  document.head.appendChild(style);
 }
 
 // Создаём летающие иконки
 function createFlyingIcons() {
-    const container = document.createElement('div');
-    container.id = 'konami-flying-container';
-    container.style.position = 'fixed';
-    container.style.top = '0';
-    container.style.left = '0';
-    container.style.width = '100%';
-    container.style.height = '100%';
-    container.style.pointerEvents = 'none';
-    container.style.zIndex = '9999';
-    document.body.appendChild(container);
+  const container = document.createElement('div');
+  container.id = 'konami-flying-container';
+  container.style.position = 'fixed';
+  container.style.top = '0';
+  container.style.left = '0';
+  container.style.width = '100%';
+  container.style.height = '100%';
+  container.style.pointerEvents = 'none';
+  container.style.zIndex = '9999';
+  document.body.appendChild(container);
 
-    const icons = ['❤️', '🧡', '💛', '💖', '💕', '💗', '✨', '⭐', '🌸', '🎮', '💒'];
-    const count = 30;
+  const icons = ['❤️', '🧡', '💛', '💖', '💕', '💗', '✨', '⭐', '🌸', '🎮', '💒'];
+  const count = 30;
 
-    for (let i = 0; i < count; i++) {
-        setTimeout(() => {
-            const icon = document.createElement('div');
-            icon.className = 'konami-flying-icon';
-            icon.innerHTML = icons[Math.floor(Math.random() * icons.length)];
-            icon.style.left = Math.random() * 100 + '%';
-            icon.style.top = Math.random() * 100 + '%';
-            icon.style.fontSize = (Math.random() * 24 + 16) + 'px';
-            icon.style.opacity = Math.random() * 0.5 + 0.3;
-            icon.style.animationDuration = (Math.random() * 0.8 + 0.8) + 's';
-            container.appendChild(icon);
+  for (let i = 0; i < count; i++) {
+    setTimeout(() => {
+      const icon = document.createElement('div');
+      icon.className = 'konami-flying-icon';
+      icon.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+      icon.style.left = Math.random() * 100 + '%';
+      icon.style.top = Math.random() * 100 + '%';
+      icon.style.fontSize = (Math.random() * 24 + 16) + 'px';
+      icon.style.opacity = Math.random() * 0.5 + 0.3;
+      icon.style.animationDuration = (Math.random() * 0.8 + 0.8) + 's';
+      container.appendChild(icon);
 
-            setTimeout(() => icon.remove(), 2000);
-        }, i * 25);
-    }
+      setTimeout(() => icon.remove(), 2000);
+    }, i * 25);
+  }
 
-    setTimeout(() => container.remove(), 3000);
+  setTimeout(() => container.remove(), 3000);
 }
 
 // Показываем уведомление в углу
 function showToast() {
-    const toast = document.createElement('div');
-    toast.className = 'konami-toast';
-    toast.innerHTML = `
+  const toast = document.createElement('div');
+  toast.className = 'konami-toast';
+  toast.innerHTML = `
         Причина тряски - секретный код активирован! 🎉💖
     `;
-    document.body.appendChild(toast);
+  document.body.appendChild(toast);
 
-    // Автоматическое исчезновение через 3.5 секунды
-    setTimeout(() => {
-        toast.classList.add('fade-out');
-        setTimeout(() => toast.remove(), 3500);
-    }, 4000);
+  // Автоматическое исчезновение через 3.5 секунды
+  setTimeout(() => {
+    toast.classList.add('fade-out');
+    setTimeout(() => toast.remove(), 3500);
+  }, 4000);
 }
 
 // Главная функция активации пасхалки
 export function activateKonami() {
-    if (isActivated) return;
+  if (isActivated) return;
 
-    isActivated = true;
-    console.log('🎮 Konami Code activated!');
+  isActivated = true;
+  console.log('🎮 Konami Code activated!');
 
-    addKonamiStyles();
+  addKonamiStyles();
 
-    // Эффект тряски
-    document.body.classList.add('konami-shake');
-    setTimeout(() => {
-        document.body.classList.remove('konami-shake');
-    }, 400);
+  // Эффект тряски
+  document.body.classList.add('konami-shake');
+  setTimeout(() => {
+    document.body.classList.remove('konami-shake');
+  }, 400);
 
-    // Летающие иконки
-    createFlyingIcons();
+  // Летающие иконки
+  createFlyingIcons();
 
-    // Уведомление в углу
-    showToast();
+  // Уведомление в углу
+  showToast();
 }
 
 // Инициализация слушателя клавиш
 export function initKonamiCode() {
-    addKonamiStyles();
+  addKonamiStyles();
 
-    const handleKeydown = (e) => {
+  const handleKeydown = (e) => {
 
-        let key = e.key;
-        if (key === 'a' || key === 'A' || key === 'а' || key === 'А' || key === 'ф' || key === 'Ф') key = 'a';
-        if (key === 'b' || key === 'B' || key === 'в' || key === 'В' || key === 'И' || key === 'и') key = 'b';
+    let key = e.key;
+    if (key === 'a' || key === 'A' || key === 'а' || key === 'А' || key === 'ф' || key === 'Ф') key = 'a';
+    if (key === 'b' || key === 'B' || key === 'в' || key === 'В' || key === 'И' || key === 'и') key = 'b';
 
-        if (key === konamiCode[konamiIndex]) {
-            konamiIndex++;
+    if (key === konamiCode[konamiIndex]) {
+      konamiIndex++;
 
-            if (konamiIndex === konamiCode.length) {
-                activateKonami();
-                konamiIndex = 0;
-            }
-        } else {
-            konamiIndex = 0;
-        }
-    };
+      if (konamiIndex === konamiCode.length) {
+        activateKonami();
+        konamiIndex = 0;
+      }
+    } else {
+      konamiIndex = 0;
+    }
+  };
 
-    document.addEventListener('keydown', handleKeydown);
-    return () => document.removeEventListener('keydown', handleKeydown);
+  document.addEventListener('keydown', handleKeydown);
+  return () => document.removeEventListener('keydown', handleKeydown);
 }

@@ -1,113 +1,117 @@
 .hero {
-    background: linear-gradient(135deg, #fff9f5 0%, #fff0e8 100%);
-    padding: 60px 20px 80px;
-    text-align: center;
-    border: none;
-    margin-top: 20px;
-    position: relative;
-    border-radius: 32px;
-    box-shadow: 0 8px 32px rgba(245, 166, 91, 0.08);
+  background: linear-gradient(135deg, #fff9f5 0%, #fff0e8 100%);
+  padding: 60px 20px 80px;
+  text-align: center;
+  border: none;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(245, 166, 91, 0.08);
 }
 
 /* Декоративные пиксельные уголки */
 .hero::before,
 .hero::after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f5a65b'%3E%3Cpath d='M4 4h4v2H6v2H4V4zm16 0v4h-2V6h-2V4h4zM4 20h4v-2H6v-2H4v4zm16 0h-4v-2h2v-2h2v4z'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.12;
-    pointer-events: none;
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f5a65b'%3E%3Cpath d='M4 4h4v2H6v2H4V4zm16 0v4h-2V6h-2V4h4zM4 20h4v-2H6v-2H4v4zm16 0h-4v-2h2v-2h2v4z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
 }
 
 .hero::before {
-    top: 16px;
-    left: 16px;
+  top: 16px;
+  left: 16px;
 }
 
 .hero::after {
-    bottom: 16px;
-    right: 16px;
-    transform: rotate(180deg);
+  bottom: 16px;
+  right: 16px;
+  transform: rotate(180deg);
 }
 
 /* Бейдж */
 .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
-    color: #f5a65b;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.65rem;
-    padding: 8px 16px;
-    border-radius: 40px;
-    margin-bottom: 16px;
-    letter-spacing: 1px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border: 1px solid rgba(245, 166, 91, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  color: #f5a65b;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.65rem;
+  padding: 8px 16px;
+  border-radius: 40px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(245, 166, 91, 0.3);
 }
 
 .badge-icon {
-    font-size: 0.9rem;
-    filter: drop-shadow(0 0 2px #f5a65b);
+  font-size: 0.9rem;
+  filter: drop-shadow(0 0 2px #f5a65b);
 }
 
 /* Заголовок */
 .hero h1 {
-    font-size: 1.5em;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #f95465;
-    margin-bottom: 30px;
-    font-family: 'Press Start 2P', monospace;
-    opacity: 0.8;
-    margin: 0 0 20px;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #f95465;
+  margin-bottom: 30px;
+  font-family: 'Press Start 2P', monospace;
+  opacity: 0.8;
+  margin: 0 0 20px;
 }
 
 /* ===== ГОРИЗОНТАЛЬНЫЙ ЛЕЙАУТ ДЛЯ ДЕСКТОПА ===== */
 .hero-layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 48px;
 }
 
 /* Карточки игроков */
 .hero-player {
-    flex: 1;
-    max-width: 280px;
+  flex: 1;
+  max-width: 280px;
 }
 
 .name-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-    text-align: center;
+  text-align: center;
 }
 
 .player-tag {
-    display: inline-block;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.8em;
-    background: linear-gradient(135deg, rgba(245, 166, 91, 0.15), rgba(249, 84, 101, 0.1));
-    color: #f5a65b;
-    padding: 6px 12px;
-    border-radius: 20px;
-    margin-bottom: 16px;
-    letter-spacing: 1px;
+  display: inline-block;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8em;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 166, 91, 0.15),
+    rgba(249, 84, 101, 0.1)
+  );
+  color: #f5a65b;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
 }
 
 .player-avatar {
-    font-size: 4rem;
-    margin: 0;
-    filter: drop-shadow(0 4px 12px rgba(245, 166, 91, 0.25));
-    transition: transform 0.2s ease;
+  font-size: 4rem;
+  margin: 0;
+  filter: drop-shadow(0 4px 12px rgba(245, 166, 91, 0.25));
+  transition: transform 0.2s ease;
 }
 
 .player-image {
@@ -115,133 +119,146 @@
 }
 
 .name-wrapper:hover .player-avatar {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .name {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 2.5em;
-    font-weight: 400;
-    background: linear-gradient(135deg, #ffb168, #f95465);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-    padding: 0 4px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2.5em;
+  font-weight: 400;
+  background: linear-gradient(135deg, #ffb168, #f95465);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  padding: 0 4px;
 }
 
 /* Центральная секция с миссией */
 .hero-mission {
-    flex: 1.5;
-    max-width: 400px;
-    padding: 0 8px;
+  flex: 1.5;
+  max-width: 400px;
+  padding: 0 8px;
 }
 
 .invite-text {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #4a4a4a;
-    margin: 0 auto 60px;
-    line-height: 1.5;
-    font-family: monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #282727;
+  margin: 0 auto 60px;
+  line-height: 1.5;
+  font-family: monospace;
 }
 
 .quest-marker {
-    color: #f5a65b;
-    margin: 0 6px;
-    font-size: 0.9rem;
-    display: inline-block;
+  color: #f5a65b;
+  margin: 0 6px;
+  font-size: 0.9rem;
+  display: inline-block;
 }
 
 .game-genre {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .genre-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, rgba(245, 166, 91, 0.2), rgba(249, 84, 101, 0.15));
-    border: 1px solid rgba(245, 166, 91, 0.3);
-    padding: 4px 16px;
-    border-radius: 30px;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.6rem;
-    color: #f95465;
-    letter-spacing: 1px;
-    backdrop-filter: blur(2px);
+  display: inline-block;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 166, 91, 0.2),
+    rgba(249, 84, 101, 0.15)
+  );
+  border: 1px solid rgba(245, 166, 91, 0.3);
+  padding: 4px 16px;
+  border-radius: 30px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6rem;
+  color: #f95465;
+  letter-spacing: 1px;
+  backdrop-filter: blur(2px);
 }
 
 .invite-subtext {
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #8b8b8b;
-    margin: 0 auto 20px;
-    line-height: 1.5;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #5b5b5b;
+  margin: 0 auto 20px;
+  line-height: 1.5;
 }
 
 /* Дата */
 .date-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 24px;
-    background: linear-gradient(135deg, rgba(245, 166, 91, 0.12), rgba(249, 84, 101, 0.08));
-    border-radius: 60px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #f5a65b;
-    font-family: 'Press Start 2P', monospace;
-    border: 1px solid rgba(245, 166, 91, 0.2);
-    backdrop-filter: blur(4px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 166, 91, 0.12),
+    rgba(249, 84, 101, 0.08)
+  );
+  border-radius: 60px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f5a65b;
+  font-family: 'Press Start 2P', monospace;
+  border: 1px solid rgba(245, 166, 91, 0.2);
+  backdrop-filter: blur(4px);
 }
 
 .pixel-icon {
-    font-size: 1rem;
-    filter: drop-shadow(0 0 2px rgba(245, 166, 91, 0.5));
+  font-size: 1rem;
+  filter: drop-shadow(0 0 2px rgba(245, 166, 91, 0.5));
 }
 
 /* Индикатор уровня */
 .level-indicator {
-    max-width: 280px;
-    margin: 0 auto 60px;
-    text-align: center;
+  max-width: 280px;
+  margin: 0 auto 60px;
+  text-align: center;
 }
 
 .level-text {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.55rem;
-    color: #f5a65b;
-    letter-spacing: 1px;
-    margin: 0 2px 8px 0;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.55rem;
+  color: #f5a65b;
+  letter-spacing: 1px;
+  margin: 0 2px 8px 0;
 }
 
 .level-bar {
-    width: 100%;
-    height: 6px;
-    background: rgba(245, 166, 91, 0.15);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 8px;
+  width: 100%;
+  height: 6px;
+  background: rgba(245, 166, 91, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
 }
 
 .level-fill {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #ffb168, #f95465);
-    border-radius: 10px;
-    animation: fillGlow 2s ease infinite;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffb168, #f95465);
+  border-radius: 10px;
+  animation: fillGlow 2s ease infinite;
 }
 
 @keyframes fillGlow {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .level-value {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.55rem;
-    color: #f95465;
-    letter-spacing: 0.5px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.55rem;
+  color: #f95465;
+  letter-spacing: 0.5px;
 }
 
 @media (min-width: 1440px) {
@@ -252,144 +269,145 @@
 
 /* ===== АДАПТИВ: ВЕРТИКАЛЬНО ДЛЯ МОБИЛОК ===== */
 @media (max-width: 768px) {
-    .hero {
-        padding: 40px 16px 60px;
-        border-radius: 24px;
-    }
+  .hero {
+    padding: 40px 16px 60px;
+    border-radius: 24px;
+  }
 
-    .hero h1 {
-        margin-bottom: 32px;
-    }
+  .hero h1 {
+    margin-bottom: 32px;
+  }
 
-    .hero-layout {
-        flex-direction: column;
-        gap: 32px;
-        margin-bottom: 40px;
-    }
+  .hero-layout {
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
 
-    .hero-player {
-        max-width: 100%;
-        width: 100%;
-    }
+  .hero-player {
+    max-width: 100%;
+    width: 100%;
+  }
 
-    .hero-player--left {
-        order: 1;
-    }
+  .hero-player--left {
+    order: 1;
+  }
 
-    .hero-mission {
-        order: 2;
-        max-width: 100%;
-        padding: 0;
-    }
+  .hero-mission {
+    order: 2;
+    max-width: 100%;
+    padding: 0;
+  }
 
-    .hero-player--right {
-        order: 3;
-    }
+  .hero-player--right {
+    order: 3;
+  }
 
-    .player-avatar {
-        font-size: 3rem;
-    }
+  .player-avatar {
+    font-size: 3rem;
+  }
 
-    .player-image {
-      width: 240px;
-    }
+  .player-image {
+    width: 240px;
+  }
 
-    .name {
-        font-size: 1.8em;
-    }
+  .name {
+    font-size: 1.8em;
+  }
 
-    .player-tag {
-        font-size: 0.6em;
-        margin-bottom: 12px;
-    }
+  .player-tag {
+    font-size: 0.6em;
+    margin-bottom: 12px;
+  }
 
-    .invite-text {
-        font-size: 0.9rem;
-    }
+  .invite-text {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
 
-    .quest-marker {
-        font-size: 0.75rem;
-    }
+  .quest-marker {
+    font-size: 0.75rem;
+  }
 
-    .genre-badge {
-        font-size: 0.5rem;
-    }
+  .genre-badge {
+    font-size: 0.5rem;
+  }
 
-    .invite-subtext {
-        font-size: 0.8rem;
-    }
+  .invite-subtext {
+    font-size: 0.8rem;
+  }
 
-    .date-badge {
-        font-size: 0.7rem;
-        padding: 8px 18px;
-    }
+  .date-badge {
+    font-size: 0.7rem;
+    padding: 8px 18px;
+  }
 
-    .level-indicator {
-        max-width: 220px;
-        margin-bottom: 40px;
-    }
+  .level-indicator {
+    max-width: 220px;
+    margin-bottom: 40px;
+  }
 }
 
 /* Для планшетов (промежуточный вариант) */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .hero-layout {
-        gap: 24px;
-    }
+  .hero-layout {
+    gap: 24px;
+  }
 
-    .hero-player {
-        max-width: 220px;
-    }
+  .hero-player {
+    max-width: 220px;
+  }
 
-    .player-avatar {
-        font-size: 3rem;
-    }
+  .player-avatar {
+    font-size: 3rem;
+  }
 
-    .name {
-        font-size: 2em;
-    }
+  .name {
+    font-size: 2em;
+  }
 
-    .hero-mission {
-        max-width: 340px;
-    }
+  .hero-mission {
+    max-width: 340px;
+  }
 
-    .invite-text {
-        font-size: 0.9rem;
-        margin-bottom: 40px;
-    }
+  .invite-text {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
 }
 
 /* Для очень маленьких экранов */
 @media (max-width: 380px) {
-    .player-avatar {
-        font-size: 2.5rem;
-    }
+  .player-avatar {
+    font-size: 2.5rem;
+  }
 
-    .name {
-        font-size: 1.4em;
-    }
+  .name {
+    font-size: 1.4em;
+  }
 
-    .invite-text {
-        font-size: 0.8rem;
-        margin-bottom: 20px;
-    }
+  .invite-text {
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+  }
 
-    .invite-subtext {
-        font-size: 0.7rem;
-    }
+  .invite-subtext {
+    font-size: 0.7rem;
+  }
 
-    .genre-badge {
-        font-size: 0.45rem;
-    }
+  .genre-badge {
+    font-size: 0.45rem;
+  }
 }
 
 /* Анимация появления */
 .hero {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
 }
 
 .hero.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
