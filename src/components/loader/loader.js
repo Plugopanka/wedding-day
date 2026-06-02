@@ -12,7 +12,7 @@ export function animateHearts(onComplete) {
     }
 
     let currentIndex = 0;
-    const redHeartSrc = '/src/assets/heart.png';
+    const redHeartSrc = 'src/assets/heart.png';
 
     function changeNextHeart() {
         if (currentIndex < hearts.length) {
