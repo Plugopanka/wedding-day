@@ -1,17 +1,21 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
-  base: './', // Важно для относительных путей
+  base: './',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
       input: {
-        main: './index.html'
-      }
-    }
+        main: resolve(__dirname, 'index.html'),
+      },
+    },
   },
   server: {
-    port: 3001
-  }
+    port: 3001,
+    open: true,
+  },
+  // Важно: копируем все HTML файлы компонентов в сборку
+  publicDir: 'src/components',
 });

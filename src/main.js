@@ -4,12 +4,17 @@ import { initKonamiCode } from './components/konami/konami';
 
 async function loadComponent(componentPath, containerId) {
     try {
-        const response = await fetch(componentPath);
+        // Убираем первый слеш для относительных путей
+        let path = componentPath;
+        if (path.startsWith('/')) {
+            path = path.substring(1);
+        }
+        const response = await fetch(path);
         const html = await response.text();
         const container = document.getElementById(containerId);
         if (container) {
             container.innerHTML = html;
-            console.log(`✅ Загружен компонент: ${componentPath}`);
+            console.log(`✅ Загружен компонент: ${path}`);
         }
         return true;
     } catch (error) {
@@ -20,19 +25,25 @@ async function loadComponent(componentPath, containerId) {
 
 // Загрузка всех компонентов
 async function loadAllComponents() {
+    console.log('Загрузка компонентов...');
 
-    await loadComponent('/src/components/ticker/ticker.html', 'ticker-container');
-    await loadComponent('/src/components/greetings/greetings.html', 'greetings-container');
-    await loadComponent('/src/components/info/info.html', 'info-container');
-    await loadComponent('/src/components/dresscode/dresscode.html', 'dresscode-container');
-    await loadComponent('/src/components/countdown/countdown.html', 'countdown-container');
-    await loadComponent('/src/components/footer/footer.html', 'footer-container');
+    await loadComponent('src/components/ticker/ticker.html', 'ticker-container');
+    await loadComponent('src/components/greetings/greetings.html', 'greetings-container');
+    await loadComponent('src/components/info/info.html', 'info-container');
+    await loadComponent('src/components/dresscode/dresscode.html', 'dresscode-container');
+    await loadComponent('src/components/countdown/countdown.html', 'countdown-container');
+    await loadComponent('src/components/footer/footer.html', 'footer-container');
 
     initializeApp();
 }
 
 // Вся логика после загрузки компонентов
 function initializeApp() {
+    console.log('Инициализация приложения...');
+
+    // Инициализируем Konami Code
+    initKonamiCode();
+
     const weddingDate = new Date(2026, 7, 2, 15, 0, 0);
 
     function updateCountdown() {
@@ -87,37 +98,10 @@ function initializeApp() {
     }, 100);
 }
 
-// Функция для загрузки основного HTML
-async function loadMainHtml() {
-    try {
-        const response = await fetch('/src/main.html');
-
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-
-        const html = await response.text();
-        const app = document.getElementById('app');
-
-        if (app) {
-            app.innerHTML = html;
-            return true;
-        }
-        return false;
-    } catch (error) {
-        console.error('❌ Ошибка загрузки main.html:', error);
-        return false;
-    }
-}
-
 async function initApp() {
-    // Загружаем main.html
-    const mainLoaded = await loadMainHtml();
+    console.log('Инициализация приложения...');
 
-    if (!mainLoaded) {
-        console.error('❌ Не удалось загрузить main.html');
-        return;
-    }
+    // HTML уже есть в index.html, не нужно загружать main.html
 
     // Находим контейнер лоадера
     const loaderContainer = document.getElementById('loader-overlay');
@@ -145,8 +129,6 @@ async function initApp() {
         if (backgroundIcons) backgroundIcons.style.display = 'flex';
         document.body.style.overflow = 'auto';
 
-        initKonamiCode();
-
         // Загружаем компоненты
         loadAllComponents();
     });
@@ -154,6 +136,7 @@ async function initApp() {
 
 // Запускаем приложение
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM загружен');
     document.body.style.overflow = 'hidden';
     initApp();
 });

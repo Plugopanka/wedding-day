@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link
@@ -10,10 +10,38 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artem&Maria</title>
+    <title>Artem & Maria | Свадьба</title>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- Фоновые цветы -->
+    <div class="background-icons">
+      <img src="/src/assets/icons/orange-flower.svg" alt="" class="bg-icon bg-icon-1">
+      <img src="/src/assets/icons/yellow-flower.svg" alt="" class="bg-icon bg-icon-2">
+      <img src="/src/assets/icons/orange-leaf.svg" alt="" class="bg-icon bg-icon-3">
+      <img src="/src/assets/icons/pink-flower.svg" alt="" class="bg-icon bg-icon-4">
+      <img src="/src/assets/icons/green-flower.svg" alt="" class="bg-icon bg-icon-5">
+      <img src="/src/assets/icons/green-flower.svg" alt="" class="bg-icon bg-icon-7">
+    </div>
+
+    <!-- Контейнер для загрузочного экрана -->
+    <div id="loader-overlay" class="loader-overlay"></div>
+
+    <div class="container">
+      <!-- Блок приветствия -->
+      <div id="greetings-container"></div>
+
+      <!-- Блок с местом и временем -->
+      <div id="info-container"></div>
+
+      <!-- Блок с дресскодом -->
+      <div id="dresscode-container"></div>
+
+      <!-- Блок с таймером -->
+      <div id="countdown-container"></div>
+
+      <div id="footer-container"></div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
