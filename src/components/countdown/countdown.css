@@ -5,31 +5,6 @@
     overflow: hidden;
 }
 
-/* Декоративные пиксельные уголки */
-.timer-section::before {
-    content: '⚙️ ◼ ⚙️ ◼';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-family: monospace;
-    font-size: 10px;
-    color: rgba(245, 166, 91, 0.1);
-    white-space: pre;
-    opacity: 0.5;
-}
-
-.timer-section::after {
-    content: '◼ ⚙️ ◼ ⚙️';
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-family: monospace;
-    font-size: 10px;
-    color: rgba(245, 166, 91, 0.1);
-    white-space: pre;
-    opacity: 0.5;
-}
-
 .section-header {
     text-align: center;
     margin-bottom: 32px;
