@@ -27,12 +27,12 @@ async function loadComponent(componentPath, containerId) {
 async function loadAllComponents() {
     console.log('Загрузка компонентов...');
 
-    await loadComponent('src/components/ticker/ticker.html', 'ticker-container');
-    await loadComponent('src/components/greetings/greetings.html', 'greetings-container');
-    await loadComponent('src/components/info/info.html', 'info-container');
-    await loadComponent('src/components/dresscode/dresscode.html', 'dresscode-container');
-    await loadComponent('src/components/countdown/countdown.html', 'countdown-container');
-    await loadComponent('src/components/footer/footer.html', 'footer-container');
+    await loadComponent('components/ticker/ticker.html', 'ticker-container');
+    await loadComponent('components/greetings/greetings.html', 'greetings-container');
+    await loadComponent('components/info/info.html', 'info-container');
+    await loadComponent('components/dresscode/dresscode.html', 'dresscode-container');
+    await loadComponent('components/countdown/countdown.html', 'countdown-container');
+    await loadComponent('components/footer/footer.html', 'footer-container');
 
     initializeApp();
 }
