@@ -31,6 +31,7 @@ async function loadAllComponents() {
   await loadComponent('components/greetings/greetings.html', 'greetings-container');
   await loadComponent('components/info/info.html', 'info-container');
   await loadComponent('components/dresscode/dresscode.html', 'dresscode-container');
+  await loadComponent('components/game/game.html', 'game-container');
   await loadComponent('components/countdown/countdown.html', 'countdown-container');
   await loadComponent('components/footer/footer.html', 'footer-container');
 

@@ -7,6 +7,7 @@
 @import './components/countdown/countdown.css';
 @import './components/greetings/greetings.css';
 @import './components/footer/footer.css';
+@import './components/game/game.css';
 
 /* ========== ФОНОВЫЕ SVG ИКОНКИ ========== */
 .background-icons {
