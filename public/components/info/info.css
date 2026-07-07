@@ -355,8 +355,10 @@
 }
 
 .chat-link {
-  text-decoration: none;
   color: #f5a65b;
+  border-radius: 20px;
+  border: 1px solid rgba(245, 166, 91, 0.2);
+  transition: all 0.3s ease;
 }
 
 .chat-image {
