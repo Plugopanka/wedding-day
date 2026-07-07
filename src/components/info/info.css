@@ -341,6 +341,21 @@
   font-weight: 600;
 }
 
+.info-chat {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.chat-image {
+  width: 20%;
+  display: block;
+  image-rendering: crisp-edges;
+  transition: transform 0.3s ease;
+}
+
 /* ===== АДАПТИВ ===== */
 @media (max-width: 1024px) {
   .info-grid {
@@ -393,6 +408,15 @@
 
   .tip-text {
     font-size: 0.8em;
+  }
+
+  .info-chat {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .chat-image {
+    width: 50%;
   }
 }
 
